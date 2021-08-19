@@ -19,7 +19,7 @@
                         <input type="text" name="firstname" class="form-control"/>
                         <label>Lastname:</label>
                         <input type="text" name="lastname" class="form-control"/>
-                        <input type="submit" value="add" class="btn btn-primary"/>
+                        <input type="submit" value="Add" class="btn btn-primary"/>
                         <a href="index.htm">Back</a>
                     </form>
                 </div>

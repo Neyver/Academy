@@ -9,7 +9,7 @@
        <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header bg-info">
-                    <h4>New Register</h4>
+                    <h4>Edit Student</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">
@@ -19,7 +19,7 @@
                         <input type="text" name="firstname" class="form-control" value="${list[1]}"/>
                         <label>Lastname:</label>
                         <input type="text" name="lastname" class="form-control" value="${list[2]}"/>
-                        <input type="submit" value="edit" class="btn btn-primary" />
+                        <input type="submit" value="Edit" class="btn btn-primary" />
                         <a href="index.htm">Back</a>
                     </form>
                 </div>

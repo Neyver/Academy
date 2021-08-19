@@ -34,8 +34,8 @@
                                 <tr>
                                     
                                 <td>${dato.getId()}</td>
-                                <td>${dato.getLastname()}</td>
                                 <td>${dato.getFirstname()}</td>
+                                <td>${dato.getLastname()}</td>
                                 <td>
                                     <a href="editStudent.htm?id=${dato.getId()}" class="btn btn-warning">Edit</a>
                                     <a href="delete.htm?id=${dato.getId()}" class="btn btn-danger">Delete</a>

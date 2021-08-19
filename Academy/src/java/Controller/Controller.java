@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -56,12 +57,12 @@ public class Controller {
     }
 
     @RequestMapping(value = "editStudent.htm", method = RequestMethod.POST)
-    public ModelAndView editStudent(Student s) {
-        for (Student st : students) {
-            if (st.getId() == s.getId()) {
-                st.setId(id);
-                st.setFirstname(s.getFirstname());
-                st.setLastname(s.getLastname());
+    public ModelAndView editStudent(String id, String firstname, String lastname) {
+       for (Student st : students) {
+            if (st.getId() == this.id) {
+                st.setId(this.id);
+                st.setFirstname(firstname);
+                st.setLastname(lastname);
             }
         }
         return new ModelAndView("redirect:/index.htm");
@@ -74,7 +75,7 @@ public class Controller {
         for (Student st : students) {
             
             if (st.getId() == id) {
-                position++;
+                position= students.indexOf(st);
             }
         }
         students.remove(position);
